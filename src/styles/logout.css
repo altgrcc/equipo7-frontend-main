@@ -1,0 +1,23 @@
+.logout-container {
+    display: contents;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+    }
+
+    .logout-message {
+    text-align: baseline;
+    padding: 2rem;
+    }
+    
+    .logout-message h2 {
+        margin-bottom: 1rem;
+        color: #333;
+    }
+    
+    .logout-message p {
+        margin: 0.5rem 0;
+    }
+    

@@ -1,0 +1,103 @@
+/* src/styles/agregarUsuario.css */
+
+.body {
+  background-color: #2837F6;
+  }
+
+  .agregarusuario-container {
+    position: fixed;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    justify-content: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .agregarusuario-container h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .agregarusuario-form .form-section {
+    margin-bottom: 1rem;
+  }
+  
+  .agregarusuario-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .nombre-inputs,
+  .apellido-inputs {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .nombre-inputs input,
+  .apellido-inputs input,
+  .agregarusuario-form input,
+  .agregarusuario-form select {
+    width: 95%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .agregarusuario-form button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    background-color: #2837F6;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .agregarusuario-form button:hover {
+    background-color: #2837F6;
+  }
+
+  .form-section select {
+    width: 400px;
+  }
+
+  .form-section button:hover {
+    background-color: #2837F6;
+  }
+
+  .goback-button {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translate(-30%, -50%);
+    background-color: #2837F6; /* azul */
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .goback-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.2);  
+  }
+  
+  .goback-icon {
+    color: white;
+    font-size: 24px;
+  }
+  
