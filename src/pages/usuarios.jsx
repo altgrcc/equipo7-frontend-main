@@ -16,7 +16,7 @@ function Usuarios() {
         <h1>Usuarios</h1>
         <div className="usuarios-buttons">
           <button type="button">Administrar</button>
-          <button type="button" onClick={() => navigate("/agregarusuario")}>Agregar</button>
+          <button type="button" onClick={() => navigate("agregarusuario")}>Agregar</button>
         </div>
       </div>
     </div>

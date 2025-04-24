@@ -32,11 +32,12 @@ function AgregarUsuario() {
   };
 
   return (
-    <div> <button type="button" className="goback-button" onClick={() => navigate("/usuarios")}>
-        <HiArrowNarrowLeft className="goback-icon" /></button> 
-    <div className="agregarusuario-container">
-      <div>
-      </div>
+    <div className="page-container">
+      <button type="button" className="goback-button" onClick={() => navigate("/usuarios")}>
+        <HiArrowNarrowLeft className="goback-icon" /> 
+      </button> 
+      
+      <div className="agregarusuario-container">
         <h1>Agregar usuario</h1>
         <form className="agregarusuario-form" onSubmit={handleSubmit}>
           {/* Sección para nombres */}

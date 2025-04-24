@@ -18,7 +18,7 @@ function App() {
         <Route path="/dashboard" element={<RutaProtegida><Layout /></RutaProtegida>}>
           <Route index element={<Dashboard />} />
           <Route path="usuarios" element={<Usuarios />} />
-          <Route path="agregarusuario" element={<AgregarUsuario />} />
+          <Route path="usuarios/agregarusuario" element={<AgregarUsuario />} />
 
         </Route>
         <Route path="/logout" element={<Logout />} />

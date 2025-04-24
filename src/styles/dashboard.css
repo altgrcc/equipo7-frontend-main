@@ -16,6 +16,7 @@
     align-items: flex-start; 
     box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
     transition: width 0.3s ease;
+    overflow: hidden;
   }
   
   .sidebar-button {
@@ -29,6 +30,7 @@
     color: white;
     cursor: pointer;
     background-color: transparent;
+    transition: all 0.3s ease;
 
     /* margin-bottom: 1rem;
     padding: 0.5rem 1rem;
@@ -39,9 +41,29 @@
     cursor: pointer;
     text-transform: lowercase; */
   }
+
+  .sidebar button:hover {
+    background-color: #032870;
+  }
   
   .sidebar-icon {
     font-size: 1.5rem;
+  }
+
+    
+  .sidebar:not(.collapsed) .logo-she-img {
+    display: block;
+  }
+
+  .sidebar.collapsed {
+    width: 80px; /* o el tamaño que quieras */
+  }
+  
+  .icon-container {
+    min-width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .logo-she-container {
@@ -57,21 +79,20 @@
   }
   
   .logo-she-img {
+    position: absolute;
+    left: 1rem;
     height: 70px;
     width: auto;
+    transition: opacity 0.3s ease;
   }
 
   .mini-logo-she-img {
     height: 40px;
     width: auto;
     position: relative;
-    top: 10px;
+    transition: opacity 0.3s ease;
   }
-  
-  
-  .sidebar button:hover {
-    background-color: #032870;
-  }
+
   
   .main-content {
     flex-grow: 1;
@@ -100,29 +121,25 @@
   }
 
   .home-logo-button:hover {
-    background-color: transparent !important;
-    border: none !important;
-    outline: none;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
   }
   
   .home-logo-button:focus {
     outline: none; /* Elimina el borde cuando el botón tiene el foco */
   }
 
-  
-  .sidebar:not(.collapsed) .logo-she-img {
-    display: block;
-  }
-
-  .sidebar.collapsed {
-    width: 80px; /* o el tamaño que quieras */
-  }
 
   .collapse-button {
     position: absolute;
     top: 50%; /* Vertically center */
     left: 250px; /* Adjust for expanded sidebar width */
     transform: translateY(-50%); /* Center vertically */
+    z-index: 1000;
     background-color: #0f1c3b; /* Match sidebar background */
     color: white;
     border: none;
@@ -144,6 +161,7 @@
 
 .collapse-button:hover {
   background-color: #032870; /* Highlight on hover */
+
 }
 
 .collapse-icon {
@@ -151,6 +169,7 @@
 }
 
 .layout-container {
+  position: relative;
   display: flex; /* Usa flexbox para alinear Sidebar y el contenido */
 }
 
