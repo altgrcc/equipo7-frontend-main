@@ -1,35 +1,32 @@
-// src/components/IntroVideo.jsx
+// src/components/LoadingVideo.jsx
 import React, { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import videoShe from "../assets/video-she.mp4";
 
-const LoadingVideo = () => {
-    const videoRef = useRef(null);
+function LoadingVideo({ onComplete }) {
     const navigate = useNavigate();
+    const videoRef = useRef(null);
 
     useEffect(() => {
-        const video = videoRef.current;
+        const timer = setTimeout(() => {
+            onComplete();
+        }, 8000);
 
-        const handleVideoEnd = () => {
-            navigate("/dashboard");
-        };
-
-        if (video) {
-            video.addEventListener("ended", handleVideoEnd);
-        }
-
-        return () => {
-            if (video) {
-                video.removeEventListener("ended", handleVideoEnd);
-            }
-        };
-    }, [navigate]);
+        return () => clearTimeout(timer);
+    }, [onComplete]);
 
     return (
         <div className="video-container">
-            <video ref={videoRef} src={videoShe} autoPlay muted className="video-fullscreen" />
+            <video
+                ref={videoRef}
+                src={videoShe}
+                autoPlay
+                muted
+                className="video-fullscreen"
+            />
         </div>
     );
-};
+} 
 
 export default LoadingVideo;
+

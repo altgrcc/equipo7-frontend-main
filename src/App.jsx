@@ -7,16 +7,20 @@ import Usuarios from "./pages/usuarios";
 import AgregarUsuario from "./pages/agregarUsuario";
 import Logout from "./pages/logout";
 import LoadingVideo from "./components/LoadingVideo"; 
+import RutaProtegida from "./components/RutaProtegida";
+import Layout from "./components/Layout"; 
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/intro" element={<LoadingVideo />} /> 
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/usuarios" element={<Usuarios />} />
-        <Route path="/agregarusuario" element={<AgregarUsuario />} />
+        <Route path="/dashboard" element={<RutaProtegida><Layout /></RutaProtegida>}>
+          <Route index element={<Dashboard />} />
+          <Route path="usuarios" element={<Usuarios />} />
+          <Route path="agregarusuario" element={<AgregarUsuario />} />
+
+        </Route>
         <Route path="/logout" element={<Logout />} />
       </Routes>
     </BrowserRouter>
@@ -24,3 +28,4 @@ function App() {
 }
 
 export default App;
+

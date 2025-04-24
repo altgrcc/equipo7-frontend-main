@@ -8,8 +8,10 @@ function Usuarios() {
   const navigate = useNavigate();
 
   return (
-    <div> <button type="button" className="goback-button" onClick={() => navigate("/dashboard")}>
-              <HiArrowNarrowLeft className="goback-icon" /></button> 
+    <div> 
+      <button type="button" className="goback-button" onClick={() => navigate("/dashboard")}>
+        <HiArrowNarrowLeft className="goback-icon" />
+      </button> 
       <div className="usuarios-container">
         <h1>Usuarios</h1>
         <div className="usuarios-buttons">

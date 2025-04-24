@@ -9,7 +9,7 @@ import LoadingVideo from "../components/LoadingVideo.jsx";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   
   // Creamos la variable para navegar
   const navigate = useNavigate();
@@ -17,21 +17,21 @@ function Login() {
   const handleSubmit = (evento) => {
     evento.preventDefault();
     console.log("Intentando iniciar sesión con:", { email, password });
-    
-    // Aquí puedes agregar tu lógica de autenticación
 
-    // Simulación de login correcto
     if (email === "admin@tec.mx" && password === "1234") {
-      setIsAuthenticated(true); // Muestra el video
+      localStorage.setItem("token", "loginValido"); // Puedes usar un token más real luego
+      setIsLoading(true);
     } else {
-        alert("Credenciales incorrectas");
+      alert("Correo o contraseña incorrectos.");
     }
-  };
-  // Si ya está autenticado, mostramos el video en vez del login
-  if (isAuthenticated) {
-    return <LoadingVideo />;
-  }
 
+  };
+
+
+  // Si ya está autenticado, mostramos el video en vez del login
+  if (isLoading) {
+    return <LoadingVideo onComplete={() => navigate("/dashboard")} />;
+  }
 
   return (
     <div className="login-container">
@@ -45,8 +45,9 @@ function Login() {
             id="email"
             placeholder="ejemplo@tec.mx"
             value={email}
-            onChange={(evento) => setEmail(evento.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             required
+            autoComplete="email"
           />
         </div>
         <div className="form-group">
@@ -56,8 +57,9 @@ function Login() {
             id="password"
             placeholder="••••••••"
             value={password}
-            onChange={(evento) => setPassword(evento.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             required
+            autoComplete="current-password"
           />
         </div>
         <button type="submit">Ingresar</button>

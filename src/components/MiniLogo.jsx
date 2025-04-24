@@ -3,7 +3,7 @@ import minilogoSHE from "../assets/mini-she-logo.png";
 
 
 const MiniLogoSHE = () => (
-    <div className="logo-she-container">
+    <div className="mini-logo-she">
         <img src={minilogoSHE} alt="mini-logo-she" className="mini-logo-she-img" />
     </div>
 );

@@ -8,13 +8,13 @@
   .sidebar {
     width: 250px;
     background-color: #0f1c3b;
-    padding: 1rem;
+    padding: 120px 1rem 1rem 1rem;
     display: flex;
+    position: relative;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start; 
     box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
     transition: width 0.3s ease;
   }
   
@@ -45,23 +45,27 @@
   }
 
   .logo-she-container {
-    background-color: transparent;
-    align-self: center;
-    margin-top: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
     padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: transparent;
+    z-index: 1000;
   }
   
   .logo-she-img {
-    height: 80px;
+    height: 70px;
     width: auto;
   }
 
   .mini-logo-she-img {
     height: 40px;
     width: auto;
+    position: relative;
+    top: 10px;
   }
   
   
@@ -76,10 +80,71 @@
     align-items: center;
   }
 
+  .main-content.collapsed {
+    margin-left: 80px; /* ajusta según el ancho colapsado */
+  }
+  
+
   .logout-button {
     background-color: blue;
     position: absolute;
     bottom: 20px;
     left: 20px;
   }
+
+  .home-logo-button {
+    background-color: transparent;
+    outline: none;
+  }
+
+  .home-logo-button:hover {
+    background-color: transparent !important;
+    border: none !important;
+    outline: none;
+  }
   
+  .home-logo-button:focus {
+    outline: none; /* Elimina el borde cuando el botón tiene el foco */
+  }
+
+  
+  .sidebar:not(.collapsed) .logo-she-img {
+    display: block;
+  }
+
+  .sidebar.collapsed {
+    width: 80px; /* o el tamaño que quieras */
+  }
+
+  .collapse-button {
+    position: absolute;
+    top: 50%; /* Vertically center */
+    left: 250px; /* Adjust for expanded sidebar width */
+    transform: translateY(-50%); /* Center vertically */
+    background-color: #0f1c3b; /* Match sidebar background */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+  }
+
+
+  .sidebar.collapsed + .collapse-button {
+  left: 80px; /* Adjust for collapsed sidebar width */
+}
+
+.collapse-button:hover {
+  background-color: #032870; /* Highlight on hover */
+}
+
+.collapse-icon {
+  font-size: 1.5rem; /* Adjust icon size */
+}
+
