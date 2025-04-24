@@ -27,7 +27,7 @@ return (
         <button type="button" className="sidebar-button" >
             <HiOutlineHome className="sidebar-icon" /> {!isCollapsed && <span>Home</span>} </button>
 
-        <button type="button" className="sidebar-button" onClick={() => navigate("/usuarios")}>
+        <button type="button" className="sidebar-button" onClick={() => navigate("./usuarios")}>
             <HiOutlineUserGroup className="sidebar-icon" /> {!isCollapsed && <span>Usuarios</span>} </button>
 
         <button type="button" className="sidebar-button" >

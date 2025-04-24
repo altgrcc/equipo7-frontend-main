@@ -10,7 +10,6 @@ function Dashboard() {
 
   return (
     <div className="dashboard-container">
-      <Sidebar isCollapsed={isCollapsed} toggleSidebar={toggleSidebar} />
       <div className="main-content">
         {/* Your dashboard page content */}
         <h1>Welcome to the Dashboard</h1>
