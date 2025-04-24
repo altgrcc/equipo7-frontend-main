@@ -5,6 +5,7 @@ import Sidebar from "./Sidebar";
 import "../styles/dashboard.css"; // Asegúrate de que aquí estén tus estilos
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi"; // Asegúrate de que estos iconos estén instalados
 
+
 function Layout() {
     const [isCollapsed, setIsCollapsed] = useState(false);
 

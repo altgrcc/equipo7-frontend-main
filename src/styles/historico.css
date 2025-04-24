@@ -1,0 +1,62 @@
+/* src/styles/historico.css */
+
+.historico-container {
+    height: 100vh;              /* Toma toda la altura de la pantalla */
+    display: flex;              /* Activa Flexbox */
+    margin-left: 50px;
+    flex-direction: column;     /* Apila elementos verticalmente */
+    justify-content: center;    /* Centrado vertical */
+    align-items: center;        /* Centrado horizontal */
+    padding: 2rem;
+    text-align: center;
+    box-sizing: border-box;
+
+    }
+    
+    .historico-buttons {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .historico-buttons button {
+        padding: 0.75rem 1rem;
+        background-color: #2837F6;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    .historico-buttons button:hover {
+        background-color: #005bb5;
+    }
+
+
+    .goback-button {
+        position: absolute !important;
+        top: 40px !important;
+        left: 300px !important;
+        background-color: #2837F6;
+        border: none;
+        border-radius: 50%;
+        padding: 10px;
+        z-index: 1000;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+    
+    .goback-button:hover {
+        background-color: #0056b3 !important;
+        transform: scale(1.1);  
+    }
+    
+    .goback-icon {
+        color: white;
+        font-size: 24px;
+    }
+    

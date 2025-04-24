@@ -33,7 +33,7 @@ function AgregarUsuario() {
 
   return (
     <div className="page-container">
-      <button type="button" className="goback-button" onClick={() => navigate("/usuarios")}>
+      <button type="button" className="goback-button" onClick={() => navigate("/dashboard/usuarios")}>
         <HiArrowNarrowLeft className="goback-icon" /> 
       </button> 
       

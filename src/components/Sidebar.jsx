@@ -66,7 +66,7 @@ return (
         </button>  
 
 
-        <button type="button" className="sidebar-button" >
+        <button type="button" className="sidebar-button" onClick={() => navigate("./historico")}>
             <div className="icon-container">
                 <HiNewspaper className="sidebar-icon" /> 
             </div>
@@ -94,7 +94,7 @@ return (
             <div className="icon-container">
                 <HiPaperAirplane className="sidebar-icon" /> 
             </div>
-            {!isCollapsed && <span className="button-text">Publicar</span>} 
+            {!isCollapsed && <span className="button-text">Nueva Encuesta</span>} 
         </button> 
 
 
