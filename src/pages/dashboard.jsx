@@ -10,9 +10,8 @@ function Dashboard() {
 
   return (
     <div className="dashboard-container">
-      <div className="main-content">
-        {/* Your dashboard page content */}
-        <h1>Welcome to the Dashboard</h1>
+      <div className="dashboard-content">
+        <h1 className="welcome-title">Bienvenido</h1>
       </div>
     </div>
   );

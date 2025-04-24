@@ -90,7 +90,7 @@ return (
         </button> 
 
 
-        <button type="button" className="sidebar-button" >
+        <button type="button" className="sidebar-button" onClick={() => navigate("./enviarEncuesta") }>
             <div className="icon-container">
                 <HiPaperAirplane className="sidebar-icon" /> 
             </div>
@@ -104,7 +104,7 @@ return (
 
             <button onClick={handleLogout} className="logout-button">
                 <div className="icon-container">
-                    <HiPaperAirplane className="sidebar-icon" /> 
+                    <HiLogout className="sidebar-icon" /> 
                 </div>
                 {!isCollapsed && <span className="button-text">Logout</span>} 
             </button> 

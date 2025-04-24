@@ -99,8 +99,8 @@
 
   .goback-button {
     position: absolute;
-    top: 2rem;
-    left: 250px;
+    top: 70px !important;
+    left: 360px !important;
     background: none;
     border: none;
     cursor: pointer;

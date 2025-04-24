@@ -9,6 +9,7 @@ import Logout from "./pages/logout";
 import LoadingVideo from "./components/LoadingVideo"; 
 import RutaProtegida from "./components/RutaProtegida";
 import Layout from "./components/Layout"; 
+import EnviarEncuesta from "./pages/enviarEncuesta";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route index element={<Dashboard />} />
           <Route path="usuarios" element={<Usuarios />} />
           <Route path="usuarios/agregarusuario" element={<AgregarUsuario />} />
+          <Route path="enviarEncuesta" element={<EnviarEncuesta />} />
 
         </Route>
         <Route path="/logout" element={<Logout />} />
